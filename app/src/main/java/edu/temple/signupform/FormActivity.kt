@@ -23,6 +23,12 @@ class MainActivity : AppCompatActivity() {
                 ||  textEmail.length() == 0 ||  textPerson.length() == 0){
                 Toast.makeText(applicationContext,"Fill out all Fields",Toast.LENGTH_LONG).show()
             }
+           else if(textPasswordC.text  != textPassword.text ){
+                Toast.makeText(applicationContext,"Your passwords do not match!",Toast.LENGTH_LONG).show()
+           }
+           else{
+                Toast.makeText(applicationContext,"Successful Login",Toast.LENGTH_LONG).show()
+           }
         }
 
     }
