@@ -19,15 +19,16 @@ class MainActivity : AppCompatActivity() {
         val textPassword = findViewById<TextView>(R.id.TextPassword)
         val textPasswordC = findViewById<TextView>(R.id.TextPasswordConfirmation)
        saveButton.setOnClickListener{
+
             if(textPassword.length() == 0 ||  textPasswordC.length() == 0
                 ||  textEmail.length() == 0 ||  textPerson.length() == 0){
                 Toast.makeText(applicationContext,"Fill out all Fields",Toast.LENGTH_LONG).show()
             }
-           else if(textPasswordC.text  != textPassword.text ){
+           else if( textPasswordC.text.toString() != textPassword.text.toString() ){
                 Toast.makeText(applicationContext,"Your passwords do not match!",Toast.LENGTH_LONG).show()
            }
            else{
-                Toast.makeText(applicationContext,"Successful Login",Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext,"Successful Sign Up",Toast.LENGTH_LONG).show()
            }
         }
 
